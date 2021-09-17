@@ -1,0 +1,79 @@
+body{
+    margin: 0;
+    padding: 0;
+}
+#wrapper{
+    margin: 0 auto;
+    border: 1px solid gray;
+    width: 1180px;
+}
+header{
+    background-color: rgb(253, 115, 34);
+    margin: 10px auto;
+}
+nav{
+    display: flex;
+    justify-content: space-between;
+}
+nav div{
+    background-color: rgb(179, 219, 255);
+    margin: 10px;
+    flex-basis: 250px;
+    height: 200px;
+}
+footer{
+    background-color: rgb(179, 219, 255);
+    margin: 10px auto;
+}
+header, footer{
+    height: 200px;
+}
+main, aside {
+    height: 400px;
+}
+#center{
+    display: flex;
+    justify-content: space-between;
+    margin: 10px auto;
+}
+main{
+    background-color: rgb(255, 200, 47);
+    flex-basis: 60%;
+}
+aside{
+    background-color: rgb(250, 139, 139);
+    flex-basis: 40%;
+}
+@media screen and(min-width: 1024px) and (max-width: 1260px){
+    #wrapper{
+        width: 960px;
+    }
+}
+@media screen and (min-width: 768px) and (max-width: 1023px) {
+    #wrapper{
+        width: 700px;
+    }
+    nav{
+        flex-wrap: wrap;
+    }
+    nav div{
+        flex-basis: 47%;
+    }
+}
+@media screen and (max-width: 767px){
+    #wrapper{
+        width: 90%;
+    }
+    nav{
+        flex-direction: column;
+        flex-basis: 150px;
+    }
+    #center{
+        flex-direction: column;
+       
+    }
+    #center aside,
+    #center main{
+        flex-basis: 250px;
+    }
+}
